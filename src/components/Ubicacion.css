@@ -1,0 +1,100 @@
+/* ============================================================
+   Ubicacion.css – Dirección y horarios
+   ============================================================ */
+
+.ubicacion {
+  background: var(--color-bg);
+}
+
+.ubicacion-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  align-items: start;
+}
+
+@media (max-width: 640px) {
+  .ubicacion-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Tarjetas */
+.ubicacion-card {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  padding: 1.75rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.ubicacion-card-icon {
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: var(--radius-sm);
+  background: rgba(59, 130, 246, 0.12);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-accent-2);
+  flex-shrink: 0;
+}
+
+.ubicacion-card-title {
+  font-size: 0.8125rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--color-text);
+}
+
+.ubicacion-card-value {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--color-text-strong);
+  line-height: 1.5;
+}
+
+.ubicacion-maps-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.375rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: var(--color-accent-2);
+  text-decoration: none;
+  margin-top: 0.25rem;
+  border-radius: 4px;
+  transition: color var(--transition);
+}
+
+.ubicacion-maps-link:hover {
+  color: var(--color-text-strong);
+}
+
+/* Horarios */
+.horario-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.horario-row {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.9375rem;
+  color: var(--color-text);
+}
+
+.horario-row .dia {
+  font-weight: 500;
+  color: var(--color-text-strong);
+}
+
+.horario-pendiente {
+  font-size: 0.875rem;
+  color: var(--color-text);
+  font-style: italic;
+}

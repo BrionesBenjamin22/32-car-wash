@@ -1,0 +1,129 @@
+/* ============================================================
+   Hero.css – Sección de presentación
+   ============================================================ */
+
+.hero {
+  padding-top: 3.75rem; /* offset navbar */
+  background: var(--color-bg);
+  position: relative;
+  overflow: hidden;
+}
+
+/* Gradiente decorativo de fondo */
+.hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(ellipse 80% 60% at 50% -10%, rgba(59, 130, 246, 0.18) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+.hero-inner {
+  max-width: var(--max-width);
+  margin-inline: auto;
+  padding-inline: var(--section-pad-h);
+  padding-block: clamp(4rem, 10vw, 7rem);
+  position: relative;
+  text-align: center;
+}
+
+.hero-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.375rem 1rem;
+  background: rgba(59, 130, 246, 0.12);
+  border: 1px solid rgba(59, 130, 246, 0.3);
+  border-radius: 100px;
+  font-size: 0.8125rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--color-accent-2);
+  margin-bottom: 1.75rem;
+}
+
+.hero-badge-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--color-accent);
+  animation: pulse-dot 2s ease-in-out infinite;
+}
+
+@keyframes pulse-dot {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50%       { opacity: 0.5; transform: scale(0.7); }
+}
+
+.hero-title {
+  font-size: clamp(2.5rem, 8vw, 5rem);
+  font-weight: 800;
+  color: var(--color-text-strong);
+  letter-spacing: -0.04em;
+  line-height: 1.08;
+  margin-bottom: 0.5rem;
+}
+
+.hero-title-accent {
+  color: var(--color-accent);
+}
+
+.hero-tagline {
+  font-size: clamp(1.125rem, 3vw, 1.5rem);
+  font-weight: 500;
+  color: var(--color-text);
+  margin-bottom: 1rem;
+}
+
+.hero-frase {
+  font-size: clamp(1rem, 2.5vw, 1.25rem);
+  color: var(--color-text);
+  max-width: 36ch;
+  margin-inline: auto;
+  margin-bottom: 2.5rem;
+  line-height: 1.5;
+}
+
+.hero-cats {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-bottom: 2.75rem;
+}
+
+.hero-cat {
+  padding: 0.25rem 0.875rem;
+  border-radius: 100px;
+  border: 1px solid var(--color-border);
+  font-size: 0.8125rem;
+  font-weight: 500;
+  color: var(--color-text);
+  background: var(--color-surface);
+}
+
+.hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+}
+
+.hero-actions .btn {
+  min-width: 220px;
+}
+
+/* Línea decorativa inferior */
+.hero-divider {
+  width: 100%;
+  height: 1px;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    var(--color-border) 20%,
+    var(--color-border) 80%,
+    transparent
+  );
+}
